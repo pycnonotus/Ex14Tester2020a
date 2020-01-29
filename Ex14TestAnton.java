@@ -9,6 +9,7 @@ class Ex14TestAnton {
         assertEquals(Ex14.subStrC("vvv",'v'),1); // let try different char
         assertEquals(Ex14.subStrC("cc",c),0); // 0 strings
         assertEquals(Ex14.subStrC("c",c),0); // 0 strings
+        assertEquals(Ex14.subStrC("ccccccccccccccccccccccc",c),21); // 0 strings
         assertEquals(Ex14.subStrC("",c),0); // 0 strings
         assertEquals(Ex14.subStrC(null,c),0); // maybe we don't check a null ?
         assertEquals(Ex14.subStrC("cccc",c),2); // let see if work with biger sub
@@ -22,7 +23,7 @@ class Ex14TestAnton {
     @org.junit.jupiter.api.Test
     void subStrMaxC() {
         assertEquals(Ex14.subStrMaxC("cc",'c',1),1); // simaple test
-        assertEquals(Ex14.subStrMaxC("cc",'c',0),1); // 
+        assertEquals(Ex14.subStrMaxC("cc",'c',0),1); //
         assertEquals(Ex14.subStrMaxC("zz",'z',1),1);// can we do this with other chars?
         assertEquals(Ex14.subStrMaxC("c",'c',1),0);
         assertEquals(Ex14.subStrMaxC("",'c',1),0);
