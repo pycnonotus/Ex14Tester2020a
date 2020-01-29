@@ -22,6 +22,7 @@ class Ex14TestAnton {
     @org.junit.jupiter.api.Test
     void subStrMaxC() {
         assertEquals(Ex14.subStrMaxC("cc",'c',1),1); // simaple test
+        assertEquals(Ex14.subStrMaxC("cc",'c',0),1); // 
         assertEquals(Ex14.subStrMaxC("zz",'z',1),1);// can we do this with other chars?
         assertEquals(Ex14.subStrMaxC("c",'c',1),0);
         assertEquals(Ex14.subStrMaxC("",'c',1),0);
@@ -29,15 +30,15 @@ class Ex14TestAnton {
         assertEquals(Ex14.subStrMaxC("ccCCCCC",'c',1),1); // Case senstive?
         assertEquals(Ex14.subStrMaxC("cCCcCCCC",'c',1),1); // Case senstive?
         assertEquals(Ex14.subStrMaxC("ccCCCCCC",'c',1),1); // Case senstive?
-        assertEquals(Ex14.subStrMaxC("ccc",'c',1),3); // can u calc?
-        assertEquals(Ex14.subStrMaxC("ccc",'c',0),2); //can u calc?
-        assertEquals(Ex14.subStrMaxC("cccc",'c',1),5); //can u calc?
-        assertEquals(Ex14.subStrMaxC("cccc",'c',2),6); //can u calc?
-        assertEquals(Ex14.subStrMaxC("cccc",'c',3),6); //can u calc?
+        assertEquals(Ex14.subStrMaxC("ccc",'c',1),3); //
+        assertEquals(Ex14.subStrMaxC("ccc",'c',0),2); //
+        assertEquals(Ex14.subStrMaxC("cccc",'c',1),5); //
+        assertEquals(Ex14.subStrMaxC("cccc",'c',2),6); //
+        assertEquals(Ex14.subStrMaxC("cccc",'c',3),6); // there is no a sub with 3 c inside
         assertEquals(Ex14.subStrMaxC("ZXZXCCC!:)cCcXcZcCCCC",'c',3),6); // Case senstive?
 
         for (int i = 1; i <10000000 ; i++) {// is bigger k trick our method?
-            assertEquals(Ex14.subStrMaxC("",'F',(i-1)),0); 
+            assertEquals(Ex14.subStrMaxC("",'F',(i-1)),0);
             assertEquals(Ex14.subStrMaxC("c",'c',(i-1)),0);
             assertEquals(1,Ex14.subStrMaxC("cc",'c',(i-1)));
             assertEquals(Ex14.subStrMaxC(null,'F',(i-1)),0);
@@ -182,7 +183,7 @@ class Ex14TestAnton {
         }
         return ret;
     }
-   
+
     static int numberOfPaths(int m, int n)
     {
         // We have to calculate m+n-2 C n-1 here
