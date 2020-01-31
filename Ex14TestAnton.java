@@ -1,3 +1,7 @@
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Ex14TestAnton {
@@ -17,6 +21,9 @@ class Ex14TestAnton {
         assertEquals(Ex14.subStrC("cvcaczc",c),2); //  maybe we do smoe shinings because ohter chars
         assertEquals(Ex14.subStrC("CcCcCccC",c),2); // Case senstive test
         assertEquals(Ex14.subStrC("VVVVvVVVvVVVvvVVVV",'v'),2); // Case senstive test
+        assertEquals(3, Ex14.subStrC("awaxczabaar", 'a'));
+        assertEquals(2, Ex14.subStrC("abcdefaaba", 'a'));
+        assertEquals(0, Ex14.subStrC("aaaaaaaaaaaaaaaaaa", 'c'));
 
     }
 
@@ -37,7 +44,7 @@ class Ex14TestAnton {
         assertEquals(Ex14.subStrMaxC("cccc",'c',2),6); //
         assertEquals(Ex14.subStrMaxC("cccc",'c',3),6); // there is no a sub with 3 c inside
         assertEquals(Ex14.subStrMaxC("ZXZXCCC!:)cCcXcZcCCCC",'c',3),6); // Case senstive?
-
+        System.out.println(" if it take more then 1~2 sec maybe u dont do O(n) ?");
         for (int i = 1; i <10000000 ; i++) {// is bigger k trick our method?
             assertEquals(Ex14.subStrMaxC("",'F',(i-1)),0);
             assertEquals(Ex14.subStrMaxC("c",'c',(i-1)),0);
@@ -49,8 +56,7 @@ class Ex14TestAnton {
             assertEquals(Ex14.subStrMaxC("vzvzvz",'z',i),3);
             assertEquals(Ex14.subStrMaxC("ZvvZvzvZZZzvzZvvZ",'z',i),3);// case senstive + random chars
         }
-
-
+        assertEquals(Ex14.subStrMaxC("ccc",'c',-1),0); //
     }
 
     @org.junit.jupiter.api.Test
@@ -72,6 +78,15 @@ class Ex14TestAnton {
         int[] a4copy = a4.clone();
         Ex14.zeroDistance(a4);
         assertArrayEquals(a4copy,a4);
+        int[] a5pre = {0,1,1,1,1,1,0};
+        Ex14.zeroDistance(a5pre);
+        int[] a5 = {0,1,2,3,2,1,0};
+        assertArrayEquals(a5pre,a5);
+        int[] a6pre = {0,1,1,1,1,1,0,1,1,1};
+        Ex14.zeroDistance(a6pre);
+        int[] a6 = {0,1,2,3,2,1,0,1,2,3};
+        assertArrayEquals(a6pre,a6);
+
 
     }
 
@@ -107,6 +122,7 @@ class Ex14TestAnton {
         assertEquals(false,Ex14.isTrans("aabcccc","aabcc"));
         assertEquals(true,Ex14.isTrans("aabcccc","aabbcccc"));
         assertEquals(false,Ex14.isTrans("aabcccc","ababcc"));
+
     }
 
     @org.junit.jupiter.api.Test
@@ -162,7 +178,11 @@ class Ex14TestAnton {
             }
         }
 
+
+
+
     }
+
 
     public void printMat(int[][] mat){
         String s="";
