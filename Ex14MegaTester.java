@@ -12,6 +12,9 @@
 
  *99% of the  test is there so all criedt to tehm!
  * 
+ * HOW TO USE: download junit 5 if needed 
+ *( https://.maven.org/search?q=g:org.junit.jupiter%20AND%20v:5.6.0, download all as jar and add to libreas)
+ * Then run Test
  */
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
