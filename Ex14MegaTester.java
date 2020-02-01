@@ -1,4 +1,5 @@
 /**
+* MUST READ!!!!
  * THIS TESTER IS MADE OF THE TESTERS:
  * https://github.com/GeorgeMpro/computer-science-task-tests/blob/maman14/test/mamn14/Ex14Test.java
  * (George)
@@ -6,7 +7,8 @@
  * (Aviv)
  * Can't find the link of the test :\
  *(Ofek )
- *
+ *99% of the  test is there so all criedt to tehm!
+ * 
  */
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
