@@ -873,12 +873,9 @@ class Ex14MegaTester {
             bw.flush();
             bw.close();
 
-            System.out.println("Check your desktop.");
-            System.out.println("You should see a text file that named " + fileName);
         }
         catch (IOException e)
         {
-            System.out.println("There was a problem when exporting the test result file");
             e.printStackTrace();
         }
     }
