@@ -1,5 +1,5 @@
 # Ex14Tester2020a
-a studen tester :) i don't take any אחריות if it miss some test
+a studen tester :) i don't take any אחריות if there a test i missed
 
 **idk if it works with BlueJ
 maybe yes, maybe not**
